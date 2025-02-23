@@ -2,6 +2,10 @@ class Item < ApplicationRecord
   has_one_attached :image
   blongs_to :user
 
+  def indax
+    @items = Item.all
+  end
+
   private
 
   def items_params
