@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   
   namespace :admin do
     get 'dashboards', to: 'dashboards#index'
-  
+    resources :users, only: [:destroy] # ここを追加
+  end
+
   devise_for :users
   root to: "homes#top"
   resources :items, only: [:index, :show]
