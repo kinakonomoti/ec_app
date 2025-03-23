@@ -1,4 +1,4 @@
-class Public::ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:top], unless: :admin_controller? # 追加
 
 
